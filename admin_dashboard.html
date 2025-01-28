@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="admin.php" method="post">
+        <h2>Post a New Placement</h2>
+
+        <label for="title">Enter the Title for Placement Post</label>
+        <input type="text" name="title" id="title" required>
+
+        <label for="desc">Description of Placement Post</label>
+        <textarea name="desc" id="desc" rows="4" required></textarea>
+
+        <label for="companyname">Name of Company:</label>
+        <input type="text" name="companyname" id="companyname" required>
+
+        <label for="date">Date of Posting</label>
+        <input type="datetime-local" name="date" id="date" required>
+
+        <label for="eligible">Eligibility Criteria:</label>
+        <input type="text" name="eligible" id="eligible" required>
+
+        <button type="submit">Post</button>
+    </form>
+</body>
+</html>
